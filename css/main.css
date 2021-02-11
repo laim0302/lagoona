@@ -1,0 +1,397 @@
+.main {
+	display: none;
+}
+
+.booking-section,
+.special-offer-section {
+	width: 100%;
+	height: 100%;	
+}
+
+
+/* Секция "Быстрая бронь" */
+.booking-section {
+	position: relative;
+	flex-shrink: 2;
+	max-width: 518px;
+	margin-right: 24px;
+}
+.booking-form {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: space-between;
+	width: 100%;
+}
+.booking-form__input {
+	flex-basis: 70px;
+	margin-bottom: 24px;
+	border: none;
+	border-radius: 12px;	
+}
+.booking-form__btn {
+	align-self: start;
+	max-height: 70px;
+	padding: 27px 24px;
+	line-height: 1;	
+}
+.booking-form__offer-quantity {
+	position: absolute;
+	bottom: 3%;
+	left: 170px;
+}
+.booking-form__offer-quantity_number {
+	color: var(--main-color1);
+	line-height: 1;	
+}
+.booking-form__offer-quantity_text {
+	color: var(--main-color2);
+	line-height: 1;	
+}
+
+
+
+/* Секция "Спецпредложение" */
+.special-offer-section {
+	max-width: 595px;
+}
+.special-offer__block {
+	position: relative;
+	line-height: 0;
+}
+.special-offer__picture img {	
+	border-radius: 12px;
+}
+.special-offer__text,
+.special-offer__price,
+.special-offer__link {
+	position: absolute;
+}
+.special-offer__text {
+	top: 48%;
+	left: 7%;
+	max-width: 340px;
+	font-size: 66px;
+	font-weight: 700;
+	line-height: 58px;
+	color: #fff;
+}
+.special-offer__price {
+	bottom: 6%;
+	left: 7%;
+	font-size: 35px;
+	line-height: 1;
+	color: #fff;
+	opacity: .5;	
+	z-index: 500;
+}
+.special-offer__link {
+	bottom: 6%;
+	left: 45%;
+	color: var(--main-color1);
+	line-height: 1;
+	padding-right: 24px;	
+	background: url('../img/arow1.svg') no-repeat;
+	background-position: bottom right;
+	background-size: contain;
+}
+
+
+/* Секция "О нас" */
+.about__article {
+padding-top: 24px;
+}
+.about__text {
+	max-width: 930px;
+	padding-left: 48px;
+	color: var(--main-color2);
+	line-height: 2;
+}
+
+
+/* Секция "Услуги" */
+.services__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.services__item {
+	flex-basis: 49%;
+	flex-shrink: 4;
+	margin-bottom: 2%;
+	background-color: #fff;
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+}
+.services__img {
+	border-radius: 12px 12px 0 0;
+	-webkit-border-radius: 12px 12px 0 0;
+	-moz-border-radius: 12px 12px 0 0;
+	-ms-border-radius: 12px 12px 0 0;
+	-o-border-radius: 12px 12px 0 0;
+}
+.services__h3 {
+	padding: 28px 44px 8px ;
+	color: var(--main-color1);
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 32px;
+}
+.services__link {
+	padding-right: 24px;
+	background: url('../img/arow1.svg') no-repeat;
+	background-position: center right;
+	background-size: 17px auto;
+}
+.services__content {
+	padding: 0 44px 24px;
+	line-height: 32px;
+}
+
+
+/* Секция "Преимущества" */
+.advantages__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.advantages__item {
+	flex-basis: 23.3%;	
+	margin-bottom: 2%;
+	padding: 36px 44px 30px;	
+	background-color: #fff;
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+}
+.advantages__content {
+	padding-top: 75px;
+	line-height: 32px;
+	background-repeat: no-repeat;	
+	background-position: top left;
+	background-size: 60px auto;
+}
+.advantages__content_1 {
+	background-image: url('../img/adv_01.svg');
+}
+.advantages__content_2 {
+	background-image: url('../img/adv_02.svg');
+}
+.advantages__content_3 {
+	background-image: url('../img/adv_03.svg');
+}
+.advantages__content_4 {
+	background-image: url('../img/adv_04.svg');
+}
+.advantages__content_5 {
+	background-image: url('../img/adv_05.svg');
+}
+.advantages__content_6 {
+	background-image: url('../img/adv_06.svg');
+}
+.advantages__content_7 {
+	background-image: url('../img/adv_07.svg');
+}
+.advantages__content_8 {
+	background-image: url('../img/adv_08.svg');
+}
+
+
+/* Секция "Размещение" */
+.accommodation__list {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.accommodation__item {
+	flex-basis: 32%;
+	margin-bottom: 2%;
+	background-color: #fff;
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+}
+
+.accommodation__img {
+	border-radius: 12px 12px 0 0;
+	-webkit-border-radius: 12px 12px 0 0;
+	-moz-border-radius: 12px 12px 0 0;
+	-ms-border-radius: 12px 12px 0 0;
+	-o-border-radius: 12px 12px 0 0;
+}
+.accommodation__content {
+	padding: 32px 44px 40px;
+	line-height: 1;
+}
+.accommodation__price {	
+	margin-bottom: 12px;
+	color: var(--main-color4);
+	background-repeat: no-repeat;	
+	background-position: center right;
+	background-size: 29%;
+	/* background-image: url('../img/hotel-atars-4.svg'); */
+}
+#acc-01 .accommodation__price,
+#acc-02 .accommodation__price,
+#acc-05 .accommodation__price,
+#acc-06 .accommodation__price,
+#acc-08 .accommodation__price {
+	background-image: url('../img/hotel-atars-4.svg')
+}
+
+#acc-03 .accommodation__price,
+#acc-04 .accommodation__price,
+#acc-07 .accommodation__price {
+	background-image: url('../img/hotel-atars-5.svg')
+}
+
+.accommodation__price_black {
+	color: var(--main-color3);
+}
+.accommodation__price_black strong {
+	font-size: 22px;
+}
+.accommodation__hotel-name {
+	margin-bottom: 20px;
+	
+}
+.accommodation__location {
+	margin-bottom: 20px;
+	color: var(--main-color4);
+}
+.accommodation__btn {
+	padding: 12px 21px;
+	line-height: 1;
+}
+.accommodation__item_big-img {
+	position: relative;
+	line-height: 0;
+	padding: 0;
+}
+.accommodation__big-img {
+	height: 100%;
+	width: auto;
+	object-fit: cover;
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;	
+}
+.accommodation__all-variants-link {
+	position: absolute;
+	left: 10%;
+	bottom: 10%;
+	padding-right: 24px;	
+	color: #fff;
+	line-height: 1;
+	font-size: 22px;
+	font-weight: 500;
+	background: url('../img/arow2.svg') no-repeat;
+	background-position: center right;
+	background-size: 17px auto;
+}
+
+/* Секция "Контакты" */
+.contacts__wrapper {
+	display: flex;
+	justify-content: space-between;
+	padding: 44px;
+	margin-bottom: 2%;
+	background-color: #fff;
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+}
+.contacts__info {
+	max-width: 388px;
+	width: 100%;
+	margin-right: 3%;	
+}
+.contacts__list {
+	line-height: 1.5;
+}
+.contacts__list span {
+color: var(--main-color1);
+}
+.contacts__item {
+	display: flex;
+	margin-bottom: 24px;
+	padding-bottom: 30px;
+	border-bottom: 1px solid #ccc;
+}
+.info__name {
+	max-width: 146px;
+	width: 100%;
+	font-size: 22px;
+	font-weight: 700;
+	color: var(--main-color2);
+}
+.info__content_phone {
+	color: var(--main-color4);
+}
+.contacts__btn {
+	margin-top: 30px;
+	padding: 25px 29px;
+}
+
+/* Секция "Остались вопрсы?" */
+.callback {
+	/* background-color: aquamarine; */
+	max-width: 630px;
+	width: 100%;
+}
+.callback .h2 {
+	padding: 0;
+}
+.callback__form {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.callback__input {
+	flex-basis: 48%;
+	min-width: 50px;
+	padding-top: 26px;
+	padding-bottom: 26px;
+	margin-bottom: 4%;
+	background-color: #f1f1f1;
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+}
+.callback__message {
+	width: 100%;
+	height: 230px;
+	margin-bottom: 4%;
+	background-color: #f1f1f1;
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+}
+.callback__confident-policy {
+	margin-bottom: 50px;
+	color: var(--main-color4);
+}
+.callback__confident-policy span {
+	color: var(--main-color1);
+}
+.callback__btn {
+	padding: 25px 128px;
+}
+
+
+ 

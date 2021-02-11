@@ -1,0 +1,68 @@
+.footer {
+	display: none;
+	/* display: flex; */
+	max-width: 1164px;	
+	padding: 44px;
+	color: #fff;
+	line-height: 0%;
+	background-color: var(--main-color3);
+	background-image: url(../img/sun.png);
+	background-repeat: no-repeat;
+	background-position: 80% bottom;
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+}
+.footer__titul {
+	max-width: 310px;
+	width: 100%;
+	margin-right: 11%;	
+	line-height: 2;
+}
+.footer__titul .footer__text-color {
+	margin-bottom: 0;
+}
+.footer__text-white {
+	margin-bottom: 10%;
+}
+.footer__text-color {
+	margin-bottom: 10%;
+	color: var(	--main-color1);
+}
+.footer__contacts {
+	margin-right: auto;
+	line-height: 1.5;
+} 
+.footer__socials-list {
+	opacity: .5;
+}
+.footer__socials-item {
+	position: relative;	
+	width: 25px;
+	height: 25px;	
+}
+.footer__socials-item:not(:last-child) {
+	margin-bottom: 20px;
+}
+.footer__socials-item_trip {
+	background-image: url(../img/social-tripadvisor.svg);
+}
+.footer__socials-item_twitter {
+	background-image: url(../img/social-twitter.svg);
+}
+.footer__socials-item_facebook {
+	background-image: url(../img/social-facebook.svg);
+}
+.footer__socials-item_vk {
+	background-image: url(../img/social-vk.svg);
+}
+.footer__socials-item_google {
+	background-image: url(../img/social-google-plus.svg);
+}
+.footer__socials-link {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+}

@@ -1,0 +1,162 @@
+/* Глобальные стили */
+
+/* MullerLight */
+@font-face {
+  font-family: 'Muller';
+  font-style: normal;
+	font-weight: 300;
+	font-display: swap;
+  src: local(''),
+       url('../fonts/MullerLight.woff2') format('woff2'), 
+       url('../fonts/MullerLight.woff') format('woff'); 
+}
+/* MullerRegular */
+@font-face {
+  font-family: 'Muller';
+  font-style: normal;
+	font-weight: 400;
+	font-display: swap;
+  src: local(''),
+       url('../fonts/MullerRegular.woff2') format('woff2'), 
+       url('../fonts/MullerRegular.woff') format('woff'); 
+}
+/* MullerMedium */
+@font-face {
+  font-family: 'Muller';
+  font-style: normal;
+	font-weight: 500;
+	font-display: swap;
+  src: local(''),
+       url('../fonts/MullerMedium.woff2') format('woff2'), 
+       url('../MullerMedium.woff') format('woff'); 
+}
+/* MullerBold */
+@font-face {
+  font-family: 'Muller';
+  font-style: normal;
+	font-weight: 700;
+	font-display: swap;
+  src: local(''),
+       url('../fonts/MullerBold.woff2') format('woff2'), 
+       url('../fonts/MullerBold.woff') format('woff'); 
+}
+
+
+/* ГЛОБАЛЬНЫЕ ПЕРЕМЕННЫЕ */
+:root {
+	--main-color1: #cc9933; /* Бронза */
+	--main-color2: #666; /* Серый */
+	--main-color3: #333; /* Серый темный */
+	--main-color4: #969696; /* Серый светлый */
+	--plhld: #bebebe; /* Placeholder */	
+}
+
+html {
+	box-sizing: border-box;
+	min-width: 320px;
+}
+*, 
+*::before, 
+*::after {
+    box-sizing: inherit;
+}
+body {
+    min-width: 320px;
+    margin: 0;
+    font-family: 'Muller', Arial, sans-serif;
+    font-size: 16px;
+		color: var(--main-color3);
+		background-color: #f1f1f1;
+}
+
+img {
+    max-width: 100%;
+    /*width: 100%;*/
+    height: auto;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+h1, 
+h2, 
+h3, 
+h4, 
+h5, 
+p {
+    padding: 0;
+    margin: 0;
+}
+input {
+	border: none;
+}
+::placeholder {
+	color: var(--plhld);
+	padding-left: 24px;
+}
+textarea {
+	border: none;
+}
+.visually-hidden {
+	width: 1px !important;
+	height: 1px !important;
+	position: absolute !important;
+	padding:0 !important;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+	clip: rect(1px, 1px, 1px, 1px);
+	border:0 !important;	
+}
+.container {
+    max-width: 1212px;
+    margin: 0 auto;
+    padding: 60px 24px 0;    
+}
+.flex-container {
+	display: flex;
+	justify-content: space-between;
+}
+.btn {
+	font-weight: 700;
+	border: 1px solid var(--main-color1);
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;
+	cursor: pointer;
+}
+.btn-fill {
+	background-color: var(--main-color1);
+	color: #fff;
+}
+.btn-nofill {
+	background-color: transparent;
+	color: var(--main-color1);
+}
+.h2 {
+	font-size: 40px;
+	font-weight: 400;
+	margin-bottom: 24px;
+	padding-left: 44px;
+}
+
+
+
+
+
+
+
+
+
+/* МЕДИА-ЗАПРОСЫ */
+
+@media screen and (max-width: 1024px) {
+  
+}
