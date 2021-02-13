@@ -93,7 +93,7 @@
 
 /* МЕДИА-ЗАПРОСЫ */
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1023px) {
 	.header__bottom-part {
 		height: 44px;
 	}

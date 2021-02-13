@@ -1,13 +1,11 @@
 .main {
-	display: none;
+	/* display: none; */
 }
-
 .booking-section,
 .special-offer-section {
 	width: 100%;
 	height: 100%;	
 }
-
 
 /* Секция "Быстрая бронь" */
 .booking-section {
@@ -48,7 +46,6 @@
 	color: var(--main-color2);
 	line-height: 1;	
 }
-
 
 
 /* Секция "Спецпредложение" */
@@ -98,6 +95,9 @@
 
 
 /* Секция "О нас" */
+.about {
+	/* display: none; */
+}
 .about__article {
 padding-top: 24px;
 }
@@ -110,6 +110,9 @@ padding-top: 24px;
 
 
 /* Секция "Услуги" */
+.services {
+	/* display: none; */
+}
 .services__list {
 	display: flex;
 	flex-wrap: wrap;
@@ -117,7 +120,7 @@ padding-top: 24px;
 }
 .services__item {
 	flex-basis: 49%;
-	flex-shrink: 4;
+	/* flex-shrink: 4; */
 	margin-bottom: 2%;
 	background-color: #fff;
 	border-radius: 12px;
@@ -142,7 +145,7 @@ padding-top: 24px;
 }
 .services__link {
 	padding-right: 24px;
-	background: url('../img/arow1.svg') no-repeat;
+	background: url('../img/arow2.svg') no-repeat;
 	background-position: center right;
 	background-size: 17px auto;
 }
@@ -153,6 +156,9 @@ padding-top: 24px;
 
 
 /* Секция "Преимущества" */
+.advantages {
+	/* display: none; */
+}
 .advantages__list {
 	display: flex;
 	flex-wrap: wrap;
@@ -203,6 +209,9 @@ padding-top: 24px;
 
 
 /* Секция "Размещение" */
+.accommodation {
+	/* display: none; */
+}
 .accommodation__list {
 	display: flex;
 	flex-wrap: wrap;
@@ -220,6 +229,8 @@ padding-top: 24px;
 }
 
 .accommodation__img {
+	width: 100%;
+	object-fit: contain;
 	border-radius: 12px 12px 0 0;
 	-webkit-border-radius: 12px 12px 0 0;
 	-moz-border-radius: 12px 12px 0 0;
@@ -236,7 +247,7 @@ padding-top: 24px;
 	background-repeat: no-repeat;	
 	background-position: center right;
 	background-size: 29%;
-	/* background-image: url('../img/hotel-atars-4.svg'); */
+	
 }
 #acc-01 .accommodation__price,
 #acc-02 .accommodation__price,
@@ -277,7 +288,7 @@ padding-top: 24px;
 }
 .accommodation__big-img {
 	height: 100%;
-	width: auto;
+	width: 100%;
 	object-fit: cover;
 	border-radius: 12px;
 	-webkit-border-radius: 12px;
@@ -299,7 +310,11 @@ padding-top: 24px;
 	background-size: 17px auto;
 }
 
+
 /* Секция "Контакты" */
+.contacts {
+	/* display: none; */
+}
 .contacts__wrapper {
 	display: flex;
 	justify-content: space-between;
@@ -313,41 +328,55 @@ padding-top: 24px;
 	-o-border-radius: 12px;
 }
 .contacts__info {
-	max-width: 388px;
+	flex-basis: 388px;
+	min-width: 340px;
 	width: 100%;
 	margin-right: 3%;	
 }
-.contacts__list {
-	line-height: 1.5;
-}
-.contacts__list span {
-color: var(--main-color1);
-}
-.contacts__item {
-	display: flex;
-	margin-bottom: 24px;
-	padding-bottom: 30px;
-	border-bottom: 1px solid #ccc;
-}
-.info__name {
-	max-width: 146px;
+.contacts__table {
 	width: 100%;
+	border-collapse: collapse;
+	color: var(--main-color2);
+	line-height: 1.5;
+	vertical-align: top;
+	margin-bottom: 50px;
+}
+.contacts__name,
+.contacts__content{
+	padding-top: 24px;
+	padding-bottom: 24px;	
+	vertical-align: baseline;
+	border-bottom: 1px solid var(--main-color4);
+}
+.contacts__name_adress,
+.contacts__content_adress {
+	padding-top: 0;
+}
+.contacts__name {
 	font-size: 22px;
 	font-weight: 700;
-	color: var(--main-color2);
+	
 }
-.info__content_phone {
+.contacts__content {
+	padding-left: 6%;
+}
+.contacts__content_phone {
+	color: var(--main-color1);
+}
+.contacts__content_email {
 	color: var(--main-color4);
 }
+.contacts__content_email span {
+	color: var(--main-color1);
+}
 .contacts__btn {
-	margin-top: 30px;
 	padding: 25px 29px;
 }
 
+
 /* Секция "Остались вопрсы?" */
 .callback {
-	/* background-color: aquamarine; */
-	max-width: 630px;
+	flex-basis: 630px;
 	width: 100%;
 }
 .callback .h2 {
@@ -363,7 +392,7 @@ color: var(--main-color1);
 	min-width: 50px;
 	padding-top: 26px;
 	padding-bottom: 26px;
-	margin-bottom: 4%;
+	margin-bottom: 24px;
 	background-color: #f1f1f1;
 	border-radius: 12px;
 	-webkit-border-radius: 12px;
@@ -374,7 +403,7 @@ color: var(--main-color1);
 .callback__message {
 	width: 100%;
 	height: 230px;
-	margin-bottom: 4%;
+	margin-bottom: 24px;
 	background-color: #f1f1f1;
 	border-radius: 12px;
 	-webkit-border-radius: 12px;
@@ -382,8 +411,11 @@ color: var(--main-color1);
 	-ms-border-radius: 12px;
 	-o-border-radius: 12px;
 }
+.callback__message::placeholder {
+	padding-top: 26px;
+}
 .callback__confident-policy {
-	margin-bottom: 50px;
+	margin-bottom: 34px;
 	color: var(--main-color4);
 }
 .callback__confident-policy span {
@@ -394,4 +426,94 @@ color: var(--main-color1);
 }
 
 
- 
+ /* МЕДИА-ЗАПРОСЫ */
+
+@media screen and (max-width: 1023px) {
+  /* Секция "Быстрая бронь" */
+	.booking-form__input {
+		flex-basis: 44px;	
+	}
+		
+
+	/* Секция "Спецпредложение" */
+	.special-offer-section {
+		max-width: 452px;
+	}
+	.special-offer__text {
+		top: 53%;
+		font-size: 50px;		
+		line-height: 40px;		
+	}
+	.special-offer__price {
+		font-size: 28px;
+	}
+
+
+	/* Секция "О нас" */
+	.about__text {
+		line-height: 1.5;
+	}
+
+
+	/* Секция "Услуги" */
+	.services__h3 {
+		padding: 20px 24px 6px;
+		font-size: 20px;
+		line-height: 30px;
+	}
+	.services__content {
+		padding: 0 24px 24px;
+		line-height: 24px;
+	}
+
+
+	/* Секция "Преимущества" */
+	.advantages__item {
+		/* flex-basis: 49%; */
+		padding: 24px;
+	}
+	.advantages__content {
+		line-height: 24px;
+	}
+
+
+	/* Секция "Размещение" */
+	.accommodation__item {
+		flex-basis: 49%;
+	}
+
+	.accommodation__item:first-child {
+		display: none;
+	}
+
+
+	/* Секция "Контакты" */
+	.contacts__wrapper{
+		padding: 24px;
+	}
+	.contacts__name {
+		font-size: 20px;
+	}
+	
+	
+	/* Секция "Остались вопрсы?" */
+	.callback__form {
+		flex-direction: column;
+		flex-shrink: 1;
+	}
+	.callback__input {
+		padding-top: 16px;
+		padding-bottom: 16px;
+	}
+	.callback__message {
+		height: 182px;
+	}
+	.callback__confident-policy {
+		font-size: 15px;
+	}
+	.callback__btn {
+		padding: 25px 100px;
+	}
+
+
+}
