@@ -73,5 +73,38 @@
 
 
 @media screen and (max-width: 767px) {
-
+	.footer {
+		flex-direction: column;
+		padding: 24px;
+		font-size: 15px;
+	}
+	.footer__titul {
+		max-width: 100%;
+		line-height: 1.2;
+	}
+	.footer__text-white {
+		margin-bottom: 24px;
+	}
+	.footer__titul .footer__text-color {
+		margin-bottom: 24px;
+	}
+	.footer__contacts {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.footer__contacts .footer__text-white {
+		flex-basis: 100%;
+	}
+	.footer__contacts .footer__text-color {
+		padding-right: 24px;
+	}
+	.footer__socials-list {
+		display: flex;
+		padding: 0;
+	}
+	.footer__socials-item {
+		margin-right: 24px;
+	}
 }
+
+

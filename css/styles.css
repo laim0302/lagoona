@@ -132,6 +132,9 @@ textarea {
 	-o-border-radius: 12px;
 	cursor: pointer;
 }
+.btn:focus {
+	outline: none;
+}
 .btn-fill {
 	background-color: var(--main-color1);
 	color: #fff;
@@ -160,3 +163,5 @@ textarea {
 		padding-left: 0;
 	}
 }
+
+
