@@ -139,9 +139,27 @@ textarea {
 	background-color: var(--main-color1);
 	color: #fff;
 }
+.btn-fill:hover {
+	background-color: transparent;
+	color: var(--main-color1);
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
+}
 .btn-nofill {
 	background-color: transparent;
 	color: var(--main-color1);
+}
+.btn-nofill:hover {
+	background-color: var(--main-color1);
+	color: #fff;
+	transition: all .3s ease-in-out;
+	-webkit-transition: all .3s ease-in-out;
+	-moz-transition: all .3s ease-in-out;
+	-ms-transition: all .3s ease-in-out;
+	-o-transition: all .3s ease-in-out;
 }
 .h2 {
 	font-size: 40px;

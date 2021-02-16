@@ -19,7 +19,9 @@
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
 	<link rel="stylesheet" type="text/css" href="./css/footer.css">
 
-	<!-- <script defer src="./js/script.js"></script> -->
+	<script defer src="./js/inputmask.min.js"></script>
+	<script defer src="./js/just-validate.min.js"></script>
+	<script defer src="./js/script.js"></script>
 
 	<title>LAGOONA. Сеть отелей</title>
 </head>
@@ -442,12 +444,12 @@
 				</li>
 
 				<li class="accommodation__item accommodation__item_big-img">
-					<picture class="accommodation__picture">
-						<source type="image/webp" srcset="./img/acc_09_373x441@1.webp">
-						<img class="accommodation__big-img" src="./img/acc_09_373x441@1.jpg" alt="">
-					</picture>
-
-					<a class="accommodation__all-variants-link" href="#">Посмотреть все варианты</a>
+					<a class="accommodation__all-variants-link" href="#">
+						<picture class="accommodation__picture">
+							<source type="image/webp" srcset="./img/acc_09_373x441@1.webp">
+							<img class="accommodation__big-img" src="./img/acc_09_373x441@1.jpg" alt="Посмотреть все варианты">
+						</picture>
+					</a>
 				</li>
 			</ul>
 		</section>
@@ -510,20 +512,21 @@
 				<section class="callback">
 					<h3 class="h2">Остались вопросы?</h3>
 
-					<form class="callback__form" name="callback-form" method="GET" action="https://echo.htmlacademy.ru"
+					<form class="callback__form" name="callback" method="GET" action="https://echo.htmlacademy.ru"
 						target="_blank">
-						<input class="callback__input" name="name" type="text" placeholder="Имя">
-						<input class="callback__input" name="phone" type="tel" placeholder="+7">
+						<input class="callback__input" type="text" name="name" id="name" data-validate-field="name"
+							placeholder="Имя*">
+						<input class="callback__input" type="tel" name="phone" id="phone" data-validate-field="phone"
+							placeholder="Телефон*">
 						<textarea class="callback__message" name="message" placeholder="Сообщение"></textarea>
+
+						<p class="callback__confident-policy">Отправляя свои данные вы соглашаетесь <br>
+							с <a href=""> Политикой конфиденциальности</a></p>
+
+						<button class="btn btn-fill callback__btn" type="submit">Отправить</button>
 					</form>
-
-					<p class="callback__confident-policy">Отправляя свои данные вы соглашаетесь <br>
-						с <a href=""> Политикой конфиденциальности</a></p>
-
-					<button class=" btn btn-fill callback__btn" type="submit">Отправить</button>
 				</section>
 			</div>
-
 		</section>
 
 	</main>

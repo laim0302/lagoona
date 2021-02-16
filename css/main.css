@@ -283,12 +283,32 @@ padding-top: 24px;
 	padding: 12px 21px;
 	line-height: 1;
 }
+.accommodation__all-variants-link {
+	position: relative;
+	color: #fff;
+	line-height: 1;
+	font-size: 22px;
+	font-weight: 500;
+}
+.accommodation__all-variants-link::before {
+	position: absolute;
+	bottom: 50px;
+	left: 24px;
+	z-index: 3;
+	content:'Посмотреть все варианты' ;
+	padding-right: 30px;
+	background-image: url('../img/arow1.svg');
+	background-repeat: no-repeat;
+	background-position: center right;
+}
+
 .accommodation__item_big-img {
 	position: relative;
 	line-height: 0;
 	padding: 0;
 }
 .accommodation__big-img {
+	position: relative;
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
@@ -298,19 +318,9 @@ padding-top: 24px;
 	-ms-border-radius: 12px;
 	-o-border-radius: 12px;	
 }
-.accommodation__all-variants-link {
-	position: absolute;
-	left: 10%;
-	bottom: 10%;
-	padding-right: 24px;	
-	color: #fff;
-	line-height: 1;
-	font-size: 22px;
-	font-weight: 500;
-	background: url('../img/arow1.svg') no-repeat;
-	background-position: center right;
-	background-size: 17px auto;
-}
+
+
+
 
 
 /* Секция "Контакты" */
