@@ -10,8 +10,7 @@
 /* Секция "Быстрая бронь" */
 .booking-section {
 	position: relative;
-	flex-shrink: 2;
-	max-width: 518px;
+	flex-shrink: 3;
 	margin-right: 24px;
 }
 .booking-form {
@@ -21,11 +20,34 @@
 	justify-content: space-between;
 	width: 100%;
 }
+.booking-form__select {
+	width: 100%;
+}
+.choices {
+	border: none;
+	border-radius: 12px;	
+}
+.choices__inner {
+	padding-left: 24px;
+	padding-top: 24px;
+	background-color: #fff;	
+	border: none;
+}
+.choices[data-type*=select-one] .choices__inner {
+	padding-bottom: 20px;
+}
+.choices__item {
+	/* padding: 12px; */
+}
+
 .booking-form__input {
+	width: 100%;
 	flex-basis: 70px;
 	margin-bottom: 24px;
 	border: none;
-	border-radius: 12px;	
+	border-radius: 12px;
+	padding: 28px 0;	
+	font-size: 14px;	
 }
 .booking-form__btn {
 	align-self: start;
@@ -156,7 +178,6 @@ padding-top: 24px;
 	line-height: 32px;
 }
 
-
 /* Секция "Преимущества" */
 .advantages {
 	/* display: none; */
@@ -210,6 +231,7 @@ padding-top: 24px;
 }
 
 
+
 /* Секция "Размещение" */
 .accommodation {
 	/* display: none; */
@@ -220,6 +242,7 @@ padding-top: 24px;
 	justify-content: space-between;
 }
 .accommodation__item {
+	position: relative;
 	flex-basis: 32%;
 	margin-bottom: 2%;
 	background-color: #fff;
@@ -283,6 +306,39 @@ padding-top: 24px;
 	padding: 12px 21px;
 	line-height: 1;
 }
+.map__btn {
+	position: absolute;
+	right: 40px;
+	bottom: 40px;
+	width: 44px;
+	border: none;
+	background-color:transparent;
+	cursor: pointer;
+}
+.map__btn-svg {
+	fill: var(--main-color1);
+}
+.map__btn-svg:hover {
+	fill: red;
+}
+
+/* Картинка "Посмотреть все варианты" */
+.accommodation__item_big-img {
+	position: relative;
+	line-height: 0;
+	padding: 0;
+}
+.accommodation__big-img {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	border-radius: 12px;
+	-webkit-border-radius: 12px;
+	-moz-border-radius: 12px;
+	-ms-border-radius: 12px;
+	-o-border-radius: 12px;	
+}
 .accommodation__all-variants-link {
 	position: relative;
 	color: #fff;
@@ -301,26 +357,6 @@ padding-top: 24px;
 	background-repeat: no-repeat;
 	background-position: center right;
 }
-
-.accommodation__item_big-img {
-	position: relative;
-	line-height: 0;
-	padding: 0;
-}
-.accommodation__big-img {
-	position: relative;
-	height: 100%;
-	width: 100%;
-	object-fit: cover;
-	border-radius: 12px;
-	-webkit-border-radius: 12px;
-	-moz-border-radius: 12px;
-	-ms-border-radius: 12px;
-	-o-border-radius: 12px;	
-}
-
-
-
 
 
 /* Секция "Контакты" */
@@ -422,6 +458,7 @@ padding-top: 24px;
 	-moz-border-radius: 12px;
 	-ms-border-radius: 12px;
 	-o-border-radius: 12px;
+	resize: none;
 }
 .callback__message::placeholder {
 	padding-top: 26px;
@@ -444,6 +481,15 @@ padding-top: 24px;
   /* Секция "Быстрая бронь" */
 	.booking-form__input {
 		flex-basis: 44px;	
+	}
+	.choices__inner {
+		padding-top: 11px;
+	}
+	.choices[data-type*=select-one] .choices__inner {
+		padding-bottom: 0;
+	}
+	.booking-form__input {
+		padding: 14px 0;	
 	}
 		
 	/* Секция "Спецпредложение" */
@@ -494,6 +540,10 @@ padding-top: 24px;
 	.accommodation__content {
 		padding: 24px;
 	}
+	.map__btn {
+		right: 24px;
+		bottom: 24px;
+	}
 
 	/* Секция "Контакты" */
 	.contacts__wrapper{
@@ -503,7 +553,7 @@ padding-top: 24px;
 		font-size: 20px;
 	}
 	
-		/* Секция "Остались вопрсы?" */
+	/* Секция "Остались вопрсы?" */
 	.callback__form {
 		flex-direction: column;
 		flex-shrink: 1;
@@ -577,24 +627,50 @@ padding-top: 24px;
 
 
 @media screen and (max-width: 540px) {
-/* Секция "Услуги" */
+	/* Секция "Быстрая бронь" */
+	.booking-form__btn {
+		padding: 16px 24px;
+	}
+
+	/* Секция "Спецпредложение" */
+	.special-offer__text {
+		top: 46%;
+		font-size: 40px;
+		line-height: .8;
+	}
+	.special-offer__price {
+		font-size: 24px;
+	}
+	.special-offer__link {
+		left: 55%;
+	}
+
+	/* Секция "Услуги" */
 	.services__item {
 		flex-basis: 100%;
 		margin-bottom: 24px;
 	}
 	.services__content {
-		font-size: 15px;
+		font-size: 14px;
 	}
 
 	/* Секция "Преимущества" */
 	.advantages__item {
 		flex-basis: 100%;
-		font-size: 15px;
+		font-size: 14px;
+		line-height: 1.5;
 	}
 
 	/* Секция "Размещение" */
 	.accommodation__item {
 		flex-basis: 100%;
+		padding: 0;
+	}
+	.advantages__content {
+		padding-top: 0;
+		padding-left: 75px;
+		background-size: 40px auto;
+		line-height: 1.5;
 	}
 
 	/* Секция "Контакты" */
@@ -602,7 +678,7 @@ padding-top: 24px;
 		min-width: 0;
 	}
 	.contacts__name {
-		font-size: 18px;
+		font-size: 16px;
 	}
 	.contacts__content {
 		font-size: 14px;

@@ -26,4 +26,70 @@ window.addEventListener('DOMContentLoaded', function () {
 			phone: 'Заполните поле'
 		},
 	});
+
+	// Кастомизация селекта 
+	const city = document.querySelector('#booking-form-city');
+	const choicesCity = new Choices(city, {
+		searchEnabled: false
+	});
+
+	const category = document.querySelector('#booking-form-category');
+	const choicesCategory = new Choices(category, {
+		searchEnabled: false
+	});
+
+	const guestnumber = document.querySelector('#booking-form-guestnumber');
+	const choicesGuestnumber = new Choices(guestnumber, {
+		searchEnabled: false
+	});
+
+	var dateIn = new Datepicker('#booking-form-datein');
+	var dateOut = new Datepicker('#booking-form-dateout');
+
+
+	// ЯНДЕКС-КАРТА
+	let mapBtn = document.querySelectorAll('.map__btn'),
+		yamapContainer = document.querySelector('.yamap__container'),
+		yamapBtnClose = document.querySelector('.yamap__btn-close');
+
+	// Вызов окна карты
+	mapBtn.forEach(function (button) {
+		button.addEventListener('click', function (event) {
+			yamapContainer.classList.toggle('yamap__container_active');
+			// var point = this.id;
+
+			ymaps.ready(init);
+			function init() {
+				// alert(point);
+				// alert(typeof point);
+
+				// Создание карты.
+				var myMap = new ymaps.Map("map", {
+					center: [41.393004, 2.193674],
+					zoom: 15
+				});
+
+				// Создание геообъекта 
+				var myPlacemark = new ymaps.Placemark([41.393004, 2.193674], {}, {
+					preset: 'islands#redIcon'
+				});
+
+				// Размещение геообъекта на карте.
+				myMap.geoObjects.add(myPlacemark);
+			}
+		})
+	});
+
+	// Закрытие окна карты
+	yamapBtnClose.addEventListener('click', function () {
+		yamapContainer.classList.toggle('yamap__container_active')
+	});
+
+
+
+
+
+
+
 });
+

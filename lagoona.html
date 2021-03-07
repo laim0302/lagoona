@@ -7,20 +7,27 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
 	<!-- Предварительная загрузка шрифтов -->
-	<link rel="preload" href="./fonts/MullerBold.woff2" as="font" type="font/woff2">
-	<link rel="preload" href="./fonts/MullerLight.woff2" as="font" type="font/woff2">
-	<link rel="preload" href="./fonts/MullerMedium.woff2" as="font" type="font/woff2">
-	<link rel="preload" href="./fonts/MullerRegular.woff2" as="font" type="font/woff2">
+	<link rel="preload" href="./fonts/MullerBold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="./fonts/MullerLight.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="./fonts/MullerMedium.woff2" as="font" type="font/woff2" crossorigin="anonymous">
+	<link rel="preload" href="./fonts/MullerRegular.woff2" as="font" type="font/woff2" crossorigin="anonymous">
 
 	<link rel="stylesheet" type="text/css" href="./css/swiper-bundle.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/choices.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/jquery-ui.min.css">
+	<link rel="stylesheet" type="text/css" href="./css/datepicker.material.css">
 	<link rel="stylesheet" type="text/css" href="./css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="./css/styles.css">
 	<link rel="stylesheet" type="text/css" href="./css/header.css">
 	<link rel="stylesheet" type="text/css" href="./css/main.css">
 	<link rel="stylesheet" type="text/css" href="./css/footer.css">
+	<link rel="stylesheet" type="text/css" href="./css/yamap.css">
 
 	<script defer src="./js/inputmask.min.js"></script>
+	<script defer src="./js/choices.min.js"></script>
+	<script defer src="./js/datepicker.js"></script>
 	<script defer src="./js/just-validate.min.js"></script>
+	<script src="https://api-maps.yandex.ru/2.1/?apikey=5dd5ca3e-8c99-4d96-b31b-b47f5ff73399&lang=ru_RU"></script>
 	<script defer src="./js/script.js"></script>
 
 	<title>LAGOONA. Сеть отелей</title>
@@ -76,11 +83,38 @@
 
 				<form class="booking-form" name="booking-form" method="GET" action="https://echo.htmlacademy.ru"
 					target="_blank">
-					<input class="booking-form__input" name="booking-form-city" type="text" placeholder="Город">
-					<input class="booking-form__input" name="booking-form-category" type="text" placeholder="Категория номера">
-					<input class="booking-form__input" name="booking-form-date" type="text" placeholder="Дата заселения">
-					<input class="booking-form__input" name="booking-form-night" type="text" placeholder="Количество ночей">
-					<input class="booking-form__input" name="booking-form-guest" type="text" placeholder="Количество гостей">
+
+					<select class="booking-form__select" name="booking-form-city" id="booking-form-city">
+						<option value="">Город</option>
+						<option>Амстердам</option>
+						<option>Барселона </option>
+						<option>Париж</option>
+						<option>Рим</option>
+						<option>Сыктывкар</option>
+					</select>
+
+					<select class="booking-form__select" name="booking-form-category" id="booking-form-category">
+						<option value="">Категория номера</option>
+						<option>Люкс</option>
+						<option>Полулюкс</option>
+						<option>Семейный</option>
+						<option>Просто переночевать</option>
+					</select>
+
+					<input class="booking-form__input" name="booking-form-datein" id="booking-form-datein" type="text"
+						placeholder="Дата заселения">
+
+					<input class="booking-form__input" name="booking-form-dateout" id="booking-form-dateout" type="text"
+						placeholder="Дата выселения">
+
+					<select class="booking-form__select" name="booking-form-guestnumber" id="booking-form-guestnumber">
+						<option value="">Количесиво гостей</option>
+						<option>1</option>
+						<option>2</option>
+						<option>3</option>
+						<option>4</option>
+					</select>
+
 					<button class="btn btn-fill booking-form__btn" type="submit">Найти номер</button>
 				</form>
 
@@ -114,6 +148,7 @@
 		<section class="about container">
 			<article class="about__article">
 				<h2 class="h2">О нас</h2>
+
 				<p class="about__text">
 					Идейные соображения высшего порядка, а также сложившаяся структура организации влечет за собой процесс
 					внедрения и модернизации системы обучения кадров, соответствует насущным потребностям. Идейные соображения
@@ -246,10 +281,7 @@
 						Значимость этого настолько очевидна, что консультация наших экспертов помогает
 					</p>
 				</li>
-
-
 			</ul>
-
 		</section>
 
 
@@ -280,6 +312,17 @@
 
 						<button class="btn btn-nofill accommodation__btn" type="submit">Номера</button>
 					</div>
+
+					<button class="map__btn" id="map__btn_1">
+						<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg"
+							xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 511.999 511.999"
+							style="enable-background:new 0 0 511.999 511.999;" xml:space="preserve">
+							<path class="map__btn-svg" d="M454.848,198.848c0,159.225-179.751,306.689-179.751,306.689c-10.503,8.617-27.692,8.617-38.195,0
+	c0,0-179.751-147.464-179.751-306.689C57.153,89.027,146.18,0,256,0S454.848,89.027,454.848,198.848z" />
+							<path style="fill:#FFE1D6;" d="M256,298.89c-55.164,0-100.041-44.879-100.041-100.041S200.838,98.806,256,98.806
+	s100.041,44.879,100.041,100.041S311.164,298.89,256,298.89z" />
+						</svg>
+					</button>
 				</li>
 
 				<li class="accommodation__item" id="acc-02">
@@ -298,11 +341,22 @@
 						</div>
 
 						<div class="accommodation__location">
-							Барселона, Испания
+							Амстердам, Нидерланды
 						</div>
 
 						<button class="btn btn-nofill accommodation__btn" type="submit">Номера</button>
 					</div>
+
+					<button class="map__btn" id="map__btn_2">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+							y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;"
+							xml:space="preserve">
+							<path class="map__btn-svg" d="M454.848,198.848c0,159.225-179.751,306.689-179.751,306.689c-10.503,8.617-27.692,8.617-38.195,0
+	c0,0-179.751-147.464-179.751-306.689C57.153,89.027,146.18,0,256,0S454.848,89.027,454.848,198.848z" />
+							<path style="fill:#FFE1D6;" d="M256,298.89c-55.164,0-100.041-44.879-100.041-100.041S200.838,98.806,256,98.806
+	s100.041,44.879,100.041,100.041S311.164,298.89,256,298.89z" />
+						</svg>
+					</button>
 				</li>
 
 				<li class="accommodation__item" id="acc-03">
@@ -326,6 +380,17 @@
 
 						<button class="btn btn-nofill accommodation__btn" type="submit">Номера</button>
 					</div>
+
+					<button class="map__btn" id="map__btn_3">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+							y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;"
+							xml:space="preserve">
+							<path class="map__btn-svg" d="M454.848,198.848c0,159.225-179.751,306.689-179.751,306.689c-10.503,8.617-27.692,8.617-38.195,0
+	c0,0-179.751-147.464-179.751-306.689C57.153,89.027,146.18,0,256,0S454.848,89.027,454.848,198.848z" />
+							<path style="fill:#FFE1D6;" d="M256,298.89c-55.164,0-100.041-44.879-100.041-100.041S200.838,98.806,256,98.806
+	s100.041,44.879,100.041,100.041S311.164,298.89,256,298.89z" />
+						</svg>
+					</button>
 				</li>
 
 				<li class="accommodation__item" id="acc-04">
@@ -344,11 +409,22 @@
 						</div>
 
 						<div class="accommodation__location">
-							Барселона, Испания
+							Марсель, Франция
 						</div>
 
 						<button class="btn btn-nofill accommodation__btn" type="submit">Номера</button>
 					</div>
+
+					<button class="map__btn" id="map__btn_4">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+							y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;"
+							xml:space="preserve">
+							<path class="map__btn-svg" d="M454.848,198.848c0,159.225-179.751,306.689-179.751,306.689c-10.503,8.617-27.692,8.617-38.195,0
+	c0,0-179.751-147.464-179.751-306.689C57.153,89.027,146.18,0,256,0S454.848,89.027,454.848,198.848z" />
+							<path style="fill:#FFE1D6;" d="M256,298.89c-55.164,0-100.041-44.879-100.041-100.041S200.838,98.806,256,98.806
+	s100.041,44.879,100.041,100.041S311.164,298.89,256,298.89z" />
+						</svg>
+					</button>
 				</li>
 
 				<li class="accommodation__item" id="acc-05">
@@ -372,6 +448,17 @@
 
 						<button class="btn btn-nofill accommodation__btn" type="submit">Номера</button>
 					</div>
+
+					<button class="map__btn" id="map__btn_5">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+							y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;"
+							xml:space="preserve">
+							<path class="map__btn-svg" d="M454.848,198.848c0,159.225-179.751,306.689-179.751,306.689c-10.503,8.617-27.692,8.617-38.195,0
+	c0,0-179.751-147.464-179.751-306.689C57.153,89.027,146.18,0,256,0S454.848,89.027,454.848,198.848z" />
+							<path style="fill:#FFE1D6;" d="M256,298.89c-55.164,0-100.041-44.879-100.041-100.041S200.838,98.806,256,98.806
+	s100.041,44.879,100.041,100.041S311.164,298.89,256,298.89z" />
+						</svg>
+					</button>
 				</li>
 
 				<li class="accommodation__item" id="acc-06">
@@ -395,6 +482,17 @@
 
 						<button class="btn btn-nofill accommodation__btn" type="submit">Номера</button>
 					</div>
+
+					<button class="map__btn" id="map__btn_6">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+							y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;"
+							xml:space="preserve">
+							<path class="map__btn-svg" d="M454.848,198.848c0,159.225-179.751,306.689-179.751,306.689c-10.503,8.617-27.692,8.617-38.195,0
+	c0,0-179.751-147.464-179.751-306.689C57.153,89.027,146.18,0,256,0S454.848,89.027,454.848,198.848z" />
+							<path style="fill:#FFE1D6;" d="M256,298.89c-55.164,0-100.041-44.879-100.041-100.041S200.838,98.806,256,98.806
+	s100.041,44.879,100.041,100.041S311.164,298.89,256,298.89z" />
+						</svg>
+					</button>
 				</li>
 
 				<li class="accommodation__item" id="acc-07">
@@ -418,6 +516,17 @@
 
 						<button class="btn btn-nofill accommodation__btn" type="submit">Номера</button>
 					</div>
+
+					<button class="map__btn" id="map__btn_7">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+							y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;"
+							xml:space="preserve">
+							<path class="map__btn-svg" d="M454.848,198.848c0,159.225-179.751,306.689-179.751,306.689c-10.503,8.617-27.692,8.617-38.195,0
+	c0,0-179.751-147.464-179.751-306.689C57.153,89.027,146.18,0,256,0S454.848,89.027,454.848,198.848z" />
+							<path style="fill:#FFE1D6;" d="M256,298.89c-55.164,0-100.041-44.879-100.041-100.041S200.838,98.806,256,98.806
+	s100.041,44.879,100.041,100.041S311.164,298.89,256,298.89z" />
+						</svg>
+					</button>
 				</li>
 
 				<li class="accommodation__item" id="acc-08">
@@ -441,6 +550,17 @@
 
 						<button class="btn btn-nofill accommodation__btn" type="submit">Номера</button>
 					</div>
+
+					<button class="map__btn" id="map__btn_8">
+						<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px"
+							y="0px" viewBox="0 0 511.999 511.999" style="enable-background:new 0 0 511.999 511.999;"
+							xml:space="preserve">
+							<path class="map__btn-svg" d="M454.848,198.848c0,159.225-179.751,306.689-179.751,306.689c-10.503,8.617-27.692,8.617-38.195,0
+	c0,0-179.751-147.464-179.751-306.689C57.153,89.027,146.18,0,256,0S454.848,89.027,454.848,198.848z" />
+							<path style="fill:#FFE1D6;" d="M256,298.89c-55.164,0-100.041-44.879-100.041-100.041S200.838,98.806,256,98.806
+	s100.041,44.879,100.041,100.041S311.164,298.89,256,298.89z" />
+						</svg>
+					</button>
 				</li>
 
 				<li class="accommodation__item accommodation__item_big-img">
@@ -461,9 +581,7 @@
 
 			<div class="contacts__wrapper">
 				<div class="contacts__info">
-
 					<table class="contacts__table">
-
 						<tr class="contacts__tr">
 							<td class="contacts__name contacts__name_adress">
 								Адрес
@@ -502,7 +620,6 @@
 								<p>с 10:0 до 19:00</p>
 							</td>
 						</tr>
-
 					</table>
 
 					<button class="btn btn-nofill contacts__btn" type="submit">Построить маршрут</button>
@@ -583,6 +700,30 @@
 			</ul>
 		</div>
 	</footer>
+
+
+	<!-- Яндекс-карта -->
+	<!-- <div id="map" style="width: 600px; height: 400px"></div> -->
+
+	<div class="yamap__container">
+		<button class="yamap__btn-close" type="reset">
+			<svg class="btn-close-svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
+				xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 24 25"
+				style="enable-background:new 0 0 24 25;" xml:space="preserve">
+				<g>
+					<g>
+						<path class="btn-close-svg" d="M23.6,3.2l-2.3-2.3L12,10.2L2.8,0.9L0.4,3.2l9.2,9.3l-9.3,9.3l2.4,2.3l9.3-9.3l9.3,9.3l2.3-2.3l-9.2-9.3
+			L23.6,3.2z" />
+					</g>
+				</g>
+			</svg>
+		</button>
+
+		<div id="map" class="yamap__window"></div>
+
+	</div>
+
+
 
 
 </body>

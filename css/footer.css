@@ -71,12 +71,11 @@
 }
 
 
-
 @media screen and (max-width: 767px) {
 	.footer {
 		flex-direction: column;
 		padding: 24px;
-		font-size: 15px;
+		font-size: 13px;
 	}
 	.footer__titul {
 		max-width: 100%;
