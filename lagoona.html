@@ -68,7 +68,15 @@
 				<form class="header__search-form" name="site-search" method="get" action="https://echo.htmlacademy.ru"
 					target="_blank">
 					<input class="header__search-input" name="header__search-input" type="search" placeholder="Поиск">
-					<button class="header__search-button" type="submit" aria-label="Поиск по сайту"></button>
+
+					<button class="header__search-button" type="submit" aria-label="Поиск по сайту">
+						<svg class="search-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+							<rect x="19.5137" y="18.5496" width="8" height="2" transform="rotate(45 19.5137 18.5496)"
+								fill="var(--main-color3)" />
+							<circle cx="11.5" cy="11.5" r="10.5" stroke="var(--main-color3)" stroke-width="2" />
+						</svg>
+					</button>
+
 				</form>
 			</div>
 		</div>
@@ -84,14 +92,16 @@
 				<form class="booking-form" name="booking-form" method="GET" action="https://echo.htmlacademy.ru"
 					target="_blank">
 
-					<select class="booking-form__select" name="booking-form-city" id="booking-form-city">
+					<input class="booking-form__input" name="booking-form-city" type="text" placeholder="Город">
+
+					<!-- <select class="booking-form__select" name="booking-form-city" id="booking-form-city">
 						<option value="">Город</option>
 						<option>Амстердам</option>
 						<option>Барселона </option>
 						<option>Париж</option>
 						<option>Рим</option>
 						<option>Сыктывкар</option>
-					</select>
+					</select> -->
 
 					<select class="booking-form__select" name="booking-form-category" id="booking-form-category">
 						<option value="">Категория номера</option>
@@ -107,13 +117,16 @@
 					<input class="booking-form__input" name="booking-form-dateout" id="booking-form-dateout" type="text"
 						placeholder="Дата выселения">
 
-					<select class="booking-form__select" name="booking-form-guestnumber" id="booking-form-guestnumber">
+					<input class="booking-form__input" name="booking-form-guestnumber" type="number"
+						placeholder="Количество гостей">
+
+					<!-- <select class="booking-form__select" name="booking-form-guestnumber" id="booking-form-guestnumber">
 						<option value="">Количесиво гостей</option>
 						<option>1</option>
 						<option>2</option>
 						<option>3</option>
 						<option>4</option>
-					</select>
+					</select> -->
 
 					<button class="btn btn-fill booking-form__btn" type="submit">Найти номер</button>
 				</form>

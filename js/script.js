@@ -28,20 +28,20 @@ window.addEventListener('DOMContentLoaded', function () {
 	});
 
 	// Кастомизация селекта 
-	const city = document.querySelector('#booking-form-city');
-	const choicesCity = new Choices(city, {
-		searchEnabled: false
-	});
+	// const city = document.querySelector('#booking-form-city');
+	// const choicesCity = new Choices(city, {
+	// 	searchEnabled: false
+	// });
 
 	const category = document.querySelector('#booking-form-category');
 	const choicesCategory = new Choices(category, {
 		searchEnabled: false
 	});
 
-	const guestnumber = document.querySelector('#booking-form-guestnumber');
-	const choicesGuestnumber = new Choices(guestnumber, {
-		searchEnabled: false
-	});
+	// const guestnumber = document.querySelector('#booking-form-guestnumber');
+	// const choicesGuestnumber = new Choices(guestnumber, {
+	// 	searchEnabled: false
+	// });
 
 	var dateIn = new Datepicker('#booking-form-datein');
 	var dateOut = new Datepicker('#booking-form-dateout');
